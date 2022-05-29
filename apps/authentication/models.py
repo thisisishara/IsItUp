@@ -1,16 +1,11 @@
-# -*- encoding: utf-8 -*-
-"""
-Copyright (c) 2019 - present AppSeed.us
-"""
-
 from flask_login import UserMixin
 
 from apps import db, login_manager
 
 from apps.authentication.util import hash_pass
 
-class Users(db.Model, UserMixin):
 
+class Users(db.Model, UserMixin):
     __tablename__ = 'Users'
 
     id = db.Column(db.Integer, primary_key=True)
